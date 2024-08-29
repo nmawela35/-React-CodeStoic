@@ -6,7 +6,9 @@ const Fruits = () => {
         {name:"Mango", price:7},
         {name:"Banana", price:2},
         {name:"Orange", price:5},
-        {name:"Pineapple", price:8}
+        {name:"Pineapple",price:8},
+        {name:"Orange", price:5},
+
     ]
   return (
     <div>
