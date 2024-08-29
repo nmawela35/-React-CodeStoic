@@ -9,8 +9,6 @@ function ConditionalComponent() {
     } else{
         return <Code/>
     }
-
-
 }
 
 export default ConditionalComponent
