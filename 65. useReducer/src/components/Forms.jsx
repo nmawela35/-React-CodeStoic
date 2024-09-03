@@ -10,13 +10,20 @@ function Forms() {
   //   // console.log(e.target)
   // }
 
+  function handlesubmit(e){
+    e.preventDefault()
+    console.log(name)
+  }
+
+
   return (
     <div>
+      {name.firstName}{" "} {name.lastName}
      <form>
       <input type="text" onChange={(e) =>setName({...name,firstName: e.target.value})} value={name.firstName}/>
       <input type="text" onChange={(e) =>setName({...name,lastName: e.target.value})} value={name.lastName}/>
+      <button onClick={(e) =>handlesubmit(e)}>Submit</button>
       </form> 
-      {name.firstName}{" "} {name.lastName}
     </div>
   )
 }
