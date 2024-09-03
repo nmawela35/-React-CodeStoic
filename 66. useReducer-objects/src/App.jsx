@@ -12,14 +12,14 @@ function reducer(state,action){
   } 
   if (action.type == 'decrement'){
     return state - 2
-}
+}}
 
-}
 
 function increase(){
   setCount(count+1)
 }
-function decrease(){
+
+const decrease =() =>{
   setCount(count-1)
 }
 
