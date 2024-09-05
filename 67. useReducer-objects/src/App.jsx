@@ -23,8 +23,8 @@ function reducer(state,action){
 
       <h1>Use Reducer {" "}{state.count}</h1>
       <input type="text" value={state.incrementBy} onChange={(e)=>dispatch({type:"setIncrement",payload:Number(e.target.value)})}/>
-      <button onClick={() =>dispatch({type:"increment", payload:5})}>Increment</button>
-      <button onClick={() =>dispatch({type:"decrement",payload:3})}>Decrement</button>
+      <button onClick={() =>dispatch({type:"increment"})}>Increment</button>
+      <button onClick={() =>dispatch({type:"decrement"})}>Decrement</button>
 
     </div>
   )

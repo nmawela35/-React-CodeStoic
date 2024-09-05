@@ -8,7 +8,7 @@ function App() {
 
 function reducer(state,action){
   if (action.type === 'increment'){
-    return state + 1
+    return state + action.payload
   } 
   if (action.type == 'decrement'){
     return state - 2
@@ -32,7 +32,7 @@ function decrease(){
       <button onClick={() =>decrease()}>Decrease</button>
 
       <h1>Use Reducer {" "}{state}</h1>
-      <button onClick={() =>dispatch({type:"increment", payload:5})}>Increment</button>
+      <button onClick={() =>dispatch({type:"increment", payload:10})}>Increment</button>
       <button onClick={() =>dispatch({type:"decrement",payload:3})}>Decrement</button>
 
 
