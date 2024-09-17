@@ -13,13 +13,10 @@ function reducer(state,action){
   if (action.type=="setIncrement"){
     return {...state,incrementBy:action.payload}
   }
-
   }
-
 
   return (
     <div className="App">
-
 
       <h1>Use Reducer {" "}{state.count}</h1>
       <input type="text" value={state.incrementBy} onChange={(e)=>dispatch({type:"setIncrement",payload:Number(e.target.value)})}/>
@@ -29,5 +26,4 @@ function reducer(state,action){
     </div>
   )
 }
-
 export default App
