@@ -2,18 +2,15 @@ import { useReducer, useState } from 'react';
 
 function App() {
   const [count,setCount] = useState(0);
-  const [state,dispatch] = useReducer(reducer,4)
-
-  // const initValue=0
+  const [state,dispatch] = useReducer(reducer,0)
 
 function reducer(state,action){
-  if (action.type === 'increment'){
+  if (action.type == 'increment'){
     return state + action.payload
   } 
-  if (action.type == 'decrement'){
-    return state - 2
+  else if (action.type == 'decrement'){
+    return state - action.payload
 }
-
 }
 
 function increase(){
@@ -22,7 +19,6 @@ function increase(){
 function decrease(){
   setCount(count-1)
 }
-
 
   return (
     <div className="App">
@@ -33,9 +29,7 @@ function decrease(){
 
       <h1>Use Reducer {" "}{state}</h1>
       <button onClick={() =>dispatch({type:"increment", payload:10})}>Increment</button>
-      <button onClick={() =>dispatch({type:"decrement",payload:3})}>Decrement</button>
-
-
+      <button onClick={() =>dispatch({type:"decrement",payload:2})}>Decrement</button>
 
     </div>
   )
