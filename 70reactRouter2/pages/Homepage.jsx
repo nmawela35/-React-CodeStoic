@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+75
 export default function Homepage() {
   const navigate = useNavigate()
   const [user,setUser] =useState("")
