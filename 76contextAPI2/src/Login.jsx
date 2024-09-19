@@ -1,7 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { UserContext } from './App'
+import { UserContext } from './context/UserContext'
 
 export default function Login() {
+
     const [value,setValue] =useState("")
     const {user,setUser} =useContext(UserContext)
 
@@ -9,8 +10,6 @@ export default function Login() {
         e.preventDefault();
         setUser(value)
     }
-    console.log(value)
-    console.log(user)
     
   return (
     <div>
